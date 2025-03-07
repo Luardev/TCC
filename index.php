@@ -1,5 +1,8 @@
 <?php
-    /* session_start();
+    /*
+    Parte do Mod
+    
+     session_start();
     if (!isset($_SESSION['login'])){
         header('Location: login.php');
         exit();

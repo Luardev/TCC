@@ -4,7 +4,7 @@ require 'conexao.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $login = $_POST['Login'];
     $senha = $_POST['senha'];
-    $stm = $con->prepare("SELECT * FROM `usuarios` WHERE login = ?"); // trocar
+    $stm = $con->prepare("SELECT * FROM `escolas` WHERE nome = ?"); // trocar
     if ($stm === false){
         die("variavel prepare() falhou" . htmlspecialchars($con->error));
     }
@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $result = $stm->get_result();
     if ($result->num_rows > 0){
         while($user = $result->fetch_assoc()){
-            if($senha == $user['senha']){
+            if($senha == $user['SENHA']){
               $_SESSION['login'] = $login;
               header('Location: escola/cadescola.php');
               exit();
