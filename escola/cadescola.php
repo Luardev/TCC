@@ -14,7 +14,7 @@ $campeonatosvar=$stmt->get_result();
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <meta charset="UTF-8">
@@ -23,7 +23,7 @@ $campeonatosvar=$stmt->get_result();
 </head>
 <body> 
 <?php
-/*
+
 echo $campeonatosvar->num_rows;
 if($campeonatosvar->num_rows>=1){
     //FAZ OS CARDZINHOS NA TELA DE ACORDO COM OS CAMPS
@@ -47,8 +47,6 @@ if($campeonatosvar->num_rows>=1){
      // echo"</div>";
     }
 }
-
-*/
 ?>
 </body>
 </html>
